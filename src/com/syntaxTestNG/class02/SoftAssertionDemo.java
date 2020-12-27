@@ -41,5 +41,7 @@ public class SoftAssertionDemo {
         WebElement welcomeText=driver.findElement(By.cssSelector("a#welcome"));
         softAssert.assertTrue(welcomeText.isDisplayed(),"Welcome message is not displayed");
         softAssert.assertEquals(welcomeText.getText(),"Welcome "+username);
+        System.out.println("End of the test case");
+        softAssert.assertAll();
 
 }}

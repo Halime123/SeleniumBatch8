@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/halime/DEV/Java8batchcode/Selenium/src/com/syntaxTestNG/class01">
+        <classes>
+            <class name="com.syntaxTestNG.class01.LoginTest">
+                <methods>
+                    <include name="validAdminLogin"/>
+                    <include name="testTitle"/>
+                </methods>
+            </class>
+            <class name="com.syntaxTestNG.class01.PreAndPostConditionAnnotaions">
+                <methods>
+                    <include name="testMethod"/>
+                    <include name="testMethod2"/>
+                    <include name="testMethod3"/>
+                </methods>
+            </class>
+            <class name="com.syntaxTestNG.class01.Task1">
+                <methods>
+                    <include name="name1"/>
+                    <include name="name2"/>
+                    <include name="name3"/>
+                </methods>
+            </class>
+            <class name="com.syntaxTestNG.class01.Task2">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+            <class name="com.syntaxTestNG.class01.TestNGIntro">
+                <methods>
+                    <include name="sayHello"/>
+                    <include name="sayBye"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -39,8 +39,9 @@ public class HW1 {
         driver.findElement ( By.id ( "txtUsername" ) ).sendKeys ( "Syntax" );
         driver.findElement ( By.id ( "txtPassword" ) ).sendKeys ( "Batch8" );
         driver.findElement ( By.id ( "btnLogin" ) ).click ( );
-        WebElement invalidCredentials = driver.findElement ( By.id ( "spanMessage" ) );
-        if (!invalidCredentials.isDisplayed ( )) {
+        String invalidCredentials = driver.findElement ( By.id ( "spanMessage" ) ).getText();
+        String expectedErrorM="Invalid credentials";
+        if (invalidCredentials.equals(expectedErrorM)) {
             System.out.println ( "Test pass" );
         } else {
             System.out.println ( "Test fail" );
