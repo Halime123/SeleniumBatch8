@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/halime/DEV/Java8batchcode/Selenium/src/com/syntaxTestNG/class02/SoftAssertionDemo.java"><classes><class name="com.syntaxTestNG.class02.SoftAssertionDemo"><methods><include name="logoValidLogin"/></methods></class></classes></test></suite>

@@ -1,14 +1,17 @@
-package com.syntaxTestNG.class01;
+package com.syntaxTestNG.class04;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import utils.CommonMethods;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginTest {
+public class LoginTest extends CommonMethods {
     WebDriver driver;
     @BeforeMethod
     public void openAndNavigate() throws InterruptedException {
@@ -19,7 +22,7 @@ public class LoginTest {
         Thread.sleep(5000);
 
     }
-    @Test
+    @Test(groups = "smoke")
     public void validAdminLogin(){
         driver.findElement(By.id("txtUsername")).sendKeys("Admin");
         driver.findElement(By.id("txtPassword")).sendKeys("Hum@nhrm123");
@@ -32,15 +35,15 @@ public class LoginTest {
         }
 
     }
-    @Test
+    @Test(groups = "regression")
     public void testTitle(){
         String expectedTitle="Human Management System";
-    String actualTitle=driver.getTitle();
-    if(expectedTitle.equals(actualTitle)){
-        System.out.println("Title is valid");
-    }else{
-        System.out.println("Title is not matched");
-    }
+        String actualTitle=driver.getTitle();
+        if(expectedTitle.equals(actualTitle)){
+            System.out.println("Title is valid");
+        }else{
+            System.out.println("Title is not matched");
+        }
     }
     @AfterMethod
     public void close(){

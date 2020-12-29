@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+    <test verbose="2" preserve-order="true"
+          name="Parallel Test1">
+        <classes>
+            <class name="com.syntaxTestNG.class01.LoginTest">
+                <methods>
+                    <include name="validAdminLogin"/>
+                    <include name="testTitle"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
